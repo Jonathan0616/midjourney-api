@@ -55,8 +55,8 @@ class Settings(BaseSettings):
     BAIDU_APPKEY: str
 
     # task queue
-    TASK_QUEUE_CONCURRENCY_SIZE: int
-    TASK_QUEUE_WAIT_SIZE: int
+    TASK_QUEUE_CONCURRENCY_SIZE: int = 3
+    TASK_QUEUE_WAIT_SIZE: int = 10
 
 
 settings = Settings(_env_file=".env")  # type: ignore
